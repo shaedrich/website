@@ -15,7 +15,8 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "ember build -e production && cp config/_redirects dist/"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",

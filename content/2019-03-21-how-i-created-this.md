@@ -1,6 +1,6 @@
 ---
 title: How this blog was created
-image: /images/advanced.jpg
+# image: /images/advanced.jpg
 imageMeta:
   attribution:
   attributionLink:

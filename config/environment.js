@@ -25,8 +25,12 @@ module.exports = function(environment) {
 
     blog: {
       title: 'NullVoxPopuli',
-      description: 'null: defn. --- vox populi: defn',
-      coverImage: '/images/blog-cover.jpg',
+      description: 'a blog about technology',
+      // description: `
+      //   null: a keyword indicating that something has no value.\n
+      //   vox populi: the voice of the people
+      // `,
+      // coverImage: '/images/blog-cover.jpg',
 
       navigation: [{
         label: 'Home',
@@ -63,6 +67,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.blog.host = 'https://nullvoxpopuli.com';
   }
 
   return ENV;

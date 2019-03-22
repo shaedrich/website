@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('demos', function() {
+    this.route('todo-mvc');
+  });
 });
 
 export default Router;

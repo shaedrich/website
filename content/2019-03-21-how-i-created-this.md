@@ -4,7 +4,7 @@ title: How this blog was created
 imageMeta:
   attribution:
   attributionLink:
-featured: true
+featured: false
 authors:
  - nullvoxpopuli
 date: Thu Mar 21 2019 13:30:13 GMT-0400 (EDT)
@@ -31,7 +31,7 @@ Here are the steps I took to create this blog / site:
       git commit -m "first commit"
       git push -u origin master
       ```
-    
+
 - visit netlify and setup a new netlify app
     - connect netlify to the repo I created on github
     - tell netlify about the domain I bought on namecheap
@@ -39,7 +39,7 @@ Here are the steps I took to create this blog / site:
     - wait for those changes to propagate the internet (~20 minutes)
     - notice that netlify says that I need to add a redirect from the netlify default domain to my domain
         - I created this file in config/_redirects
-        
+
         ```
         # Redirect default Netlify subdomain to primary domain
         https://nullvoxpopuli-website.netlify.com/* https://nullvoxpopuli.com/:splat 301!

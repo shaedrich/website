@@ -42,7 +42,7 @@ module.exports = function(environment) {
       //   id: 'chris-manson'
       // }
     ]
-    }
+    },
   };
 
   if (environment === 'development') {

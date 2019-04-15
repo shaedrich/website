@@ -1,6 +1,6 @@
 ---
 title: A General Project Structure That Works in Any Ecosystem
-image:
+image: /images/robert-wagner-388370-unsplash.jpg
 imageMeta:
   attribution:
   attributionLink:

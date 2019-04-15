@@ -56,3 +56,13 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+## Image Hacks
+
+Rotate image the correct way (some programs just add metadat instead of actually modifying the image)
+```bash
+file=emberconf-stage.jpg
+exiftool -Orientation= $file
+convert $file -rotate 180 $file
+```

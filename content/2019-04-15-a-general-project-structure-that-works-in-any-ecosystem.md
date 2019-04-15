@@ -9,6 +9,9 @@ authors:
   - nullvoxpopuli
 date: Mon Apr 15 2019 06:44:47 GMT-0400 (Eastern Daylight Time)
 tags:
+  - javascript
+  - architecture
+  - frontend
   - ember
   - react
   - angular

@@ -1,5 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
+import { later } from '@ember/runloop';
 
 const Router = EmberRouter.extend({
   location: config.locationType,
@@ -8,7 +9,7 @@ const Router = EmberRouter.extend({
   init() {
     this._super(...arguments);
     this.on('routeDidChange', () => {
-      window.Prism && window.Prism.highlightAll();
+      later(() => window.Prism && window.Prism.highlightAll());
     });
   },
 });

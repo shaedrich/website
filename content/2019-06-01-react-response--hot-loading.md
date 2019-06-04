@@ -41,7 +41,7 @@ The article is broken out into a few short sections:
 
     a. Hot module replacement
 
-It's a short article, and the first half is setting up the project -- so, if you have a terminal shell ready and all setup for javascript development, feel free to run the following command to instantiate your project, and we can skip parts `1`, `2`, `2a`, `2b`, `3a` and `4` (we'll get to `4a shortly`).
+It's a short article, and the first half is setting up the project -- so, if you have a terminal shell ready and are all setup for javascript development, feel free to run the following command to instantiate your project, and we can skip parts `1`, `2`, `2a`, `2b`, `3a` and `4` (we'll get to `4a shortly`).
 
 Note: if all you care about is how to do Hot module replacement, feel free to [skip ahead](#hmr)
 
@@ -49,7 +49,7 @@ Note: if all you care about is how to do Hot module replacement, feel free to [s
 npx ember-cli new hmr-demo -b @ember/octane-app-blueprint
 ```
 
-Depending on your familiarity with ember, this may seem like it _isn't enough_ to set up a project. Well, my friends, with the power of conventions and agreed upon tooling, the above command bundles all the above setup steps so that you don't need to care about them when making apps.  Sure, if you enjoy tweaking webpack configs to try to squeeze out more loading performance or reduce bundle size in a variety of ways, that's fine -- but for _being productive in feature development_, it's not something that needs to be repeated for every project -- even in the React world, and especially at my previous company [DeveloperTown](http://developertown.com/) (a consultancy), configuration files were copied and pasted between projects.
+Depending on your familiarity with ember, it may seem like this _isn't enough_ to set up a project. Well, my friends, with the power of conventions and agreed upon tooling, the above command bundles all the above setup steps so that you don't need to care about them when making apps.  Sure, if you enjoy tweaking webpack configs to try to squeeze out more loading performance or reduce bundle size in a variety of ways, that's fine -- but for _being productive in feature development_, it's not something that needs to be repeated for every project -- even in the React world, and especially at my previous company [DeveloperTown](http://developertown.com/) (a consultancy), configuration files were copied and pasted between projects.
 
 Next up, let's look at writing components in Ember -- by rewriting the "Greeting" component from the thoughtbot article.
 
@@ -62,7 +62,7 @@ This creates 3 files as shown in this screenshot of the terminal output:
 While the generate component command gives you 3 files, you don't _need_ each of them. The generate command gives you those files so that, for most components, you have the availability to quickly open and edit, without having to create the files yourselves and implement the boilerplate.
 
 
-in `app/templates/components/greeting.hbs`, we'll type out a little template that says Hello to whatever name we pass in. We can either ignore the greeting.js and greeting-test.js files for now.
+in `app/templates/components/greeting.hbs`, we'll type out a little template that says Hello to whatever name we pass in. We can ignore the greeting.js and greeting-test.js files for now.
 ```handlebars
 <div class='greeting'>
   Hello, {{@name}}!

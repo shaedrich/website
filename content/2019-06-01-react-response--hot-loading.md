@@ -78,6 +78,8 @@ Inside of `app/templates/application.hbs`, the entrypoint to rendering our appli
 {{outlet}}
 ```
 
+A note about the syntax used here, if coming from React, or any other ecosystem, the `@` used when invoking a component signifies that the key-value pair is an argument, and not an attribute, such as `class` or `data-test` would be. This allows for some nice API design when building UI components where you want to give control of attribute values to the caller. For more information on this, see [@pzuraq](https://twitter.com/pzuraq)'s blog post on [Angle Brackets and Named Arguments](https://www.pzuraq.com/coming-soon-in-ember-octane-part-2-angle-brackets-and-named-arguments/)
+
 
 <span id='hmr' />
 ## Hot module replacement

@@ -19,7 +19,7 @@ Partially due to the fact that I find coming up with things to write about somew
 
 My hope for this series is only two things:
  - Improve the perception of Ember with respect to modern features and behavior
- - Show how conventions Architectural patterns can make everyone's lives easier.
+ - Show how conventions and architectural patterns can make everyone's lives easier.
 
 
 In response to [Setting Up Webpack for React and Hot Module Replacement](https://thoughtbot.com/blog/setting-up-webpack-for-react-and-hot-module-replacement) (by thoughtbot), as proposed by [@j_mcnally](https://twitter.com/j_mcnally/status/1134844414256386048), I'll be going through the article in chunks as there are correlations with how all of what is explained could be done in an ember project.

@@ -41,7 +41,7 @@ So, how is _this_ article going to be any different? My goal is to define a set 
 
 Firstly, let's define the criteria that we'll assess structures with.
 1. Users should be able to maintain their apps without worrying about the structure of their imports inhibiting them from making changes.
-2. Related files should be discoverable, such that a user does not need to hunt for a file should they not be using TypeScript (where you'd be able to use "Go to definition"
+2. Related files should be discoverable, such that a user does not need to hunt for a file should they not be using TypeScript (where you'd be able to use "Go to definition")
 3. Related files should be accessible, such that a user can easily locate a related file without having any IDE features (i.e.: browsing on github).
 4. Users should have reasonable context at any level within their project hierarchy. Flattening out too much _is_ overwhelming and reduces the ability to maintain, discover, and access.
 5. Refactoring sections of the project should be easy. When moving a directory to a new location, the internal behavior should remain functional.
@@ -105,7 +105,7 @@ src
     └── md5.js
 ```
 
-Going though the folders from top to bottom, because dev.to doesn't allow inline links without code fences... (a great feature of one of [prism.js'](https://prismjs.com/) plugins.
+Going though the folders from top to bottom, because dev.to doesn't allow inline links without code fences... (a great feature of one of [prism.js'](https://prismjs.com/) plugins).
 
 ### `src`
 

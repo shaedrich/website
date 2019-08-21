@@ -5,7 +5,7 @@ imageMeta:
   attribution:
   attributionLink: https://unsplash.com/photos/CBtV8oL5dlo
 featured: true
-authors: 
+authors:
   - nullvoxpopuli
 date: Sun Aug 18 2019 21:42:35 GMT-0400 (Eastern Daylight Time)
 tags:
@@ -150,7 +150,7 @@ Previously, emberclear (a side project I work / experiment with), used css trans
 
 // TODO: create codesandbox demo or something
 
-The scss is fairly concise, but has its limitations. I wanted to add gestures -- specifically for the ability to swipe open and swipe close the sidebar.  
+The scss is fairly concise, but has its limitations. I wanted to add gestures -- specifically for the ability to swipe open and swipe close the sidebar.
 
 First, the sidebar is going to be re-designed a bit. There were too many visual state permutations, so maintaining each of those via javascript would be just that much more painful. Why JavaScript? For CSS, the only properties currently supporting touch are [scroll snapping](https://css-tricks.com/practical-css-scroll-snapping/). On mobile devices, we want our new sidebar to have some overlap so that we have an illusion of depth within the app.
 
@@ -161,7 +161,7 @@ There are a number of approaches a person could take to implement gestures:
 
 ## Native JS
 
-This is the most verbose of of the options. There are 6 events to track 
+This is the most verbose of of the options. There are 6 events to track
 
 ## Ecosystem Specific
 
@@ -182,7 +182,7 @@ transition:
 
 <iframe width="100%" height="300" src="//jsfiddle.net/NullVoxPopuli/sp96rht1/17/embedded/result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
-The issue here is that, when opening, the width animation completes before the transform, revealing the background behind the main content before the animation has finished. 
+The issue here is that, when opening, the width animation completes before the transform, revealing the background behind the main content before the animation has finished.
 
 **width transition matches transform**
 ```css
@@ -194,7 +194,7 @@ transition:
 
 Even though this fixes the opening problem, we now have an issue that, when closing, the width animation isn't completed fast enough, so we again see the background behind the main content.
 
-**solution?**
+**double transitions?**
 
 Since we have two different sets of transitions that are both correct and incorrect in each other's incorrect and correct situation, we need to dynamically change the transition before toggling.
 
@@ -212,3 +212,9 @@ if (isClosing) {
     `;
   }
 ```
+
+**removing transitions altogether**
+
+This mostly behaves how we want, just not smoothly. Maybe now we need to write the snapping mation a javascript animation instead of a css transition?
+
+<iframe src="https://codesandbox.io/embed/hopeful-franklin-r6qiq?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fsrc%2Fswipe-handler.ts&moduleview=1" title="Demonstration of offcanvas animation performance issue" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>

@@ -164,7 +164,7 @@ Notes on the new APIs introduced:
   The `task` function handles all the "state" of the async behavior.
   This'll include running, not running, errored, how many concurrent task there are,
   what the last result or error was. For more information on `task`,
-  [see the `task` documentation]().
+  [see the `task` documentation](http://ember-concurrency.com/api/global.html#task).
 
 - `yield`
 
@@ -175,7 +175,7 @@ Notes on the new APIs introduced:
 
 - `drop`
 
-  This is an ember-concurrency api on the [`Task`]().
+  This is an ember-concurrency api on the [`Task Property`](http://ember-concurrency.com/api/TaskProperty.html).
   It signifies the type of behavior we want. In this example,
   we want subsequent requests to be dropped or ignored,
   as we want to wait for the first request to be completed before allowing a subsequent request.
@@ -422,7 +422,7 @@ function waitMs(ms) {
   });
 }
 
-export default class TextSearch extends Component {
+export default class TextSearch extends Component<Args> {
   @tracked text = '';
 
   lastInvocation = undefined;
@@ -471,7 +471,7 @@ interface Args {
   onSearch: <ResultType>(text: string) => Promise<ResultType>
 }
 
-export default class TextSearch extends Component {
+export default class TextSearch extends Component<Args> {
   @tracked text = '';
 
   @(task(function*(){

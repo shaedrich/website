@@ -49,7 +49,7 @@ Forms can be used for creating and updating data. Given that we have the followi
 
 ```handlebars
 <form {{on 'submit' this.onSubmit}}>
-  <input type='submit' value='Save' />
+  <button type='submit'>Save</button>
 </form>
 ```
 Every time the user triggers the form's submit, `this.onSubmit` will be invoked. That sounds exactly what we want right? Well, not necessarily. Maybe `onSubmit` is defined as:
@@ -96,7 +96,7 @@ export default class MyForm extends Component {
 
 ```handlebars
 <form {{on 'submit' this.onSubmit}}>
-  <input type='submit' value='Save' disabled={{this.isSubmitting}}/>
+  <button type='submit' disabled={{this.isSubmitting}}>Save</button>
 </form>
 ```
 We've now doubled the amount of code in this example.
@@ -149,7 +149,7 @@ export default class MyForm extends Component {
 ```
 ```handlebars
 <form {{on 'submit' (perform this.onSubmit)}}>
-  <input type='submit' value='Save' disabled={{this.onSubmit.isRunning}}/>
+  <button type='submit' disabled={{this.onSubmit.isRunning}}>Save</button>
 </form>
 ```
 
@@ -455,7 +455,7 @@ export default class TextSearch extends Component<Args> {
   <Input @value={{this.text}} />
 
   <!-- submit on press of enter key-->
-  <input type='submit' value='Search'>
+  <button type='submit'>Search</button>
 </form>
 ```
 
@@ -487,7 +487,7 @@ export default class TextSearch extends Component<Args> {
   <Input @value={{this.text}} />
 
   <!-- submit on press of enter key-->
-  <input type='submit' value='Search'>
+  <button type='submit'>Search</button>
 </form>
 ```
 

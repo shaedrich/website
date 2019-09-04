@@ -117,7 +117,7 @@ Our action now becomes:
 
     await fetch('https://my.api/resource', { method: 'POST' });
 
-    if (this.isDestroyed || this.isDestroying) {
+    if (!this.isDestroyed && !this.isDestroying) {
       this.isSubmitting = false;
     }
   }

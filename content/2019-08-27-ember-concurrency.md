@@ -375,10 +375,10 @@ export default class AsyncButton extends Component<Args> {
   @tracked isSuccess = false;
 
   @(task(function*() {
-    await this.args.promise();
+    yield this.args.promise();
     this.isSuccess = true;
 
-    await timeout(SHOW_SUCCESS_FOR_MS);
+    yield timeout(SHOW_SUCCESS_FOR_MS);
 
     this.isSuccess = false;
   }).drop())

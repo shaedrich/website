@@ -14,7 +14,7 @@ tags:
 
 # Concurrency, the problems you don't know you have
 
-In user interface develompent, there are many intermediate states that must be accounted for.
+In user interface development, there are many intermediate states that must be accounted for.
 A user may click a button that triggers something that will take a while, such as an API request.
 Maybe a websocket connection needs to be established,
 or there is a page with search or autocomplete capabilities.
@@ -445,9 +445,8 @@ export default class TextSearch extends Component<Args> {
       return; /* do not invoke search */
     }
 
-    await this.args.onSearch(text);
+    await this.args.onSearch(this.text);
   }
-  search;
 }
 ```
 ```handlebars

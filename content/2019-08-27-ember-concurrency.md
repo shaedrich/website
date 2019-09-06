@@ -193,9 +193,9 @@ Notes on the new APIs introduced:
 
 <h2 id='when-not'>When wouldn't you use ember-concurrency?</h2>
 
-`ember-concurrency` is not a replacement for `async`/`await` behaviors. It's a supplement. The rule of thumb is: 
+`ember-concurrency` is not a replacement for `async`/`await` behaviors. It's a supplement. The rule of thumb is:
 
-> Use `async`/`await` when your function has no side-effects on the calling context.   
+> Use `async`/`await` when your function has no side-effects on the calling context.
 > Use `ember-concurrency` when there are side-effects, or limiting concurrent executions of a function.
 
 Where a side-effect is:
@@ -219,12 +219,12 @@ export default class MyComponent extends Component {
 }
 
 ```
-It does not set any properties on the class. If the component is destroyed while the `fetch` request is in-flight -- nothing will go wrong, as there is no `set` / assignment on a destroyed component. 
+It does not set any properties on the class. If the component is destroyed while the `fetch` request is in-flight -- nothing will go wrong, as there is no `set` / assignment on a destroyed component.
 
 If we desire to trigger `getPosts` from a user interaction, there will need to be an `ember-concurrency` task somewhere.
 
 ```ts
-@action 
+@action
 async refresh() {
   let posts = await this.getPosts();
 
@@ -243,7 +243,7 @@ Both of these are solved with a Task
   let posts = yield this.getPosts();
 
   this.posts = posts;
-}).drop()) 
+}).drop())
 refresh;
 ```
 
@@ -476,8 +476,8 @@ export default class TextSearch extends Component<Args> {
   @(task(function*(){
     yield timeout(DEBOUNCE_MS);
 
-    yield this.args.onSearch(text);
-  }).keepLatest())
+    yield this.args.onSearch(this.text);
+  }).restartable())
   search;
 }
 ```

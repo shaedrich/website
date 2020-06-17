@@ -1,5 +1,5 @@
 ---
-title: React Response Hot Loading
+title: "React Response: Hot Loading"
 image: /images/timothy-meinberg-206976-unsplash.jpg
 imageMeta:
   attribution:
@@ -73,7 +73,7 @@ in `app/templates/components/greeting.hbs`, we'll type out a little template tha
 Inside of `app/templates/application.hbs`, the entrypoint to rendering our application, we need to render our `Greeting` component.
 
 ```handlebars
-<Greeting @name="Preston" />
+<Greeting @name="Kerrigan" />
 
 {{outlet}}
 ```
@@ -125,7 +125,10 @@ yarn ember install ember-ast-hot-load
 done.
 
 ## Want More Information?
- - [Getting started (general)](https://guides.emberjs.com/release/getting-started/quick-start/)
- - [Templates in Ember](https://guides.emberjs.com/release/templates/handlebars-basics/)
- - [Components](https://guides.emberjs.com/release/components/defining-a-component/)
- - [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
+
+- [Getting started (general)](https://guides.emberjs.com/release/getting-started/quick-start/)
+- [Templates in Ember](https://guides.emberjs.com/release/templates/handlebars-basics/)
+- [Components](https://guides.emberjs.com/release/components/defining-a-component/)
+- [Addons and Dependencies](https://guides.emberjs.com/release/addons-and-dependencies/managing-dependencies/)
+- [The Ember Atlas](http://emberatlas.com)
+  - [Ember for React Developers](https://www.notion.so/Ember-For-React-Developers-556a5d343cfb4f8dab1f4d631c05c95b)

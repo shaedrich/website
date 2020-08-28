@@ -6,6 +6,32 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     fingerprint: {
       extensions: ['js', 'css', 'map']
+    },
+    'ember-prism': {
+      theme: 'tomorrow',
+      components: [
+        'javascript',
+        'typescript',
+        'json',
+        'json5',
+        'js-extras',
+        'vim',
+        'jsx',
+        'tsx',
+        'bash', 'markup-templating', 'markdown',
+        'handlebars',
+        'git',
+        'css',
+        'css-extras',
+      ],
+      plugins: [
+        'line-numbers',
+        'line-highlight',
+        'copy-to-clipboard',
+        'autolinker',
+        'normalize-whitespace',
+        'remove-initial-line-feed'
+      ],
     }
   });
 

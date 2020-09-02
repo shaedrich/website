@@ -341,9 +341,9 @@ For demonstration purposes, we'll "say" that our bundler and CLI are configured
 together to produce a map of relative file paths to modules:
 ```ts
 let containerRegistry = {
-  'services/bot': import('./services/bot'),
-  'services/ai': import('./services/ai'),
-  'services/ui': import('./services/ui'),
+  'services/bot': await import('./services/bot'),
+  'services/ai': await import('./services/ai'),
+  'services/ui': await import('./services/ui'),
 }
 ```
 

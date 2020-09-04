@@ -18,7 +18,7 @@ The tools behind this blog were demo'd at EmberConf by [Chris Manson](https://tw
 Since I didn't yet have a domain, I figured it would take a bit longer.
 
 Here are the steps I took to create this blog / site:
-- buy domain at [namecheap.com](namecheap.com)
+- buy domain at [namecheap.com](https://namecheap.com)
 - create blog:
     - `ember new website --yarn`
     - `cd website`

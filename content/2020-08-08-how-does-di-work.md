@@ -434,7 +434,7 @@ the first argument to each of your classes.
 
 So, if you want to have your own "kind" of object, maybe it's a bunch of custom
 objects that interact with something external, such as an API, or a Canvas, or WebGL,
-or .. really anything!, it's possible to _registry_ your objects with Ember's
+or .. really anything!, it's possible to _register_ your objects with Ember's
 container.
 
 Ember does this internally for Services, Routes, Controllers, Components, Helpers,

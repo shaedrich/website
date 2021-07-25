@@ -1,5 +1,5 @@
 ---
-title: Size of all node\_modules
+title: "Size of all node_modules"
 image: /images/nathan-anderson-KvgB81s4dF0-unsplash.jpg
 imageMeta:
   attribution: "Nathan Anderson"

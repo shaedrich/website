@@ -1,9 +1,9 @@
 ---
 title: Size of all node\_modules
-image:
+image: /images/nathan-anderson-KvgB81s4dF0-unsplash.jpg
 imageMeta:
-  attribution:
-  attributionLink:
+  attribution: "Nathan Anderson"
+  attributionLink: https://unsplash.com/photos/KvgB81s4dF0
 featured: true
 authors:
   - nullvoxpopuli

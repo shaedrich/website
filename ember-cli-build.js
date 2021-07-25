@@ -2,10 +2,10 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     fingerprint: {
-      extensions: ['js', 'css', 'map']
+      extensions: ['js', 'css', 'map'],
     },
     'ember-prism': {
       theme: 'tomorrow',
@@ -20,7 +20,9 @@ module.exports = function(defaults) {
         'vim',
         'jsx',
         'tsx',
-        'bash', 'markup-templating', 'markdown',
+        'bash',
+        'markup-templating',
+        'markdown',
         'handlebars',
         'git',
         'css',
@@ -32,9 +34,9 @@ module.exports = function(defaults) {
         'copy-to-clipboard',
         'autolinker',
         'normalize-whitespace',
-        'remove-initial-line-feed'
+        'remove-initial-line-feed',
       ],
-    }
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

@@ -67,5 +67,10 @@
   "volta": {
     "node": "14.12.0",
     "yarn": "1.22.5"
+  },
+  "dependencies": {
+    "@glimmer/tracking": "^1.0.4",
+    "ember-prism": "^0.10.0",
+    "prismjs-glimmer": "^1.1.1"
   }
 }

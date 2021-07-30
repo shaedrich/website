@@ -210,11 +210,9 @@ Maybe `beforeunload` (to protect against accidental refreshes while editing a fo
 This sometimes has caused folks to add an invisible element _just so that they can use the modifier hook_.
 We should not add more DOM than we absolutely need, and behavior setup in JS should be torn down in JS.
 
-
-
-✔️  Good -- behavior is grouped
+✔️  Good -- no modifiers needed
 ```hbs
-<div {{resizable}}></div>
+{{!-- No element --}}
 ```
 
 ```js

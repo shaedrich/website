@@ -19,6 +19,10 @@ tags:
 This is mostly going to be about `did-insert`, `did-update`, etc, aka, the
 [`@ember/render-modifiers`](https://github.com/emberjs/ember-render-modifiers).
 
+
+_If you know of a pattern that you use the render-modifiers for and it feels awkward and is
+not covered here, let me know_
+
 I'm writing about this, because I don't think there has been any guidance published
 on what to do. A long time ago
 ([10 months ago](https://github.com/emberjs/ember-render-modifiers/commit/c836f83901a9068e6e3897f54cf4b7b9aa69ede5#diff-b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5)),
@@ -34,7 +38,9 @@ a warning was added to the top of the `@ember/render-modifiers` README explainin
 
 
 So yeah, there is kind of a lot to unpack there. _Especially_ since we haven't really had an
-alternative to the data-side / non-dom-related-side of things for a long while.
+alternative to the data-side / non-dom-related-side of things for a long while. Throughout this post, there will be
+bulleted lists showing the benefits of each alternative -- because I usually skim long posts with code,
+and I'm sure others do as well -- bulleted lists stad out ;)
 
 ## Using a custom modifier
 
@@ -94,6 +100,12 @@ export default class Resizable extends Modifier {
 }
 ```
 
+Benefits of the custom modifier
+ - all element tied to a behavior is encapsulated in a single class
+ - easier to keep track of cleanup
+ - can be render-tested outside of the component where it is used
+ - shareable among other elements
+ - reads better when parsing the template with your eyes
 
 ## Using a local modifier
 
@@ -131,9 +143,21 @@ export default class MyComponent extends Component {
 ```
 It'll work the exact same is the previously globally available version.
 
+Benefits of a local modifier
+ - most of the benefits of a custom modifier
+ - additionally, modifiers that are "specific to a thing", can be kept private~ish (as private as JS allows anyway)
+ - allows for easier prototyping without interfering with the global pool of modifiers
+
 ## More information on modifiers
 
+Modifier abstractions aren't yet adopted into the framework, but you can learn more here
+
 - [ember-modifier](https://github.com/ember-modifier/ember-modifier)
+  Lots of information in here about the philosophy and thought process about when to use a modifier.
+- [RFC #757: Default Modifier Manager](https://github.com/emberjs/rfcs/pull/757)
+  For using plain vanilla JavaScript functions as modifiers when used in the modifier position in template syntax.
+- [RFC #416: Render Element Modifiers](https://github.com/emberjs/rfcs/pull/415)
+  Original RFC detailing a transition path from old ember component lifecycle hooks
 
 ## Fetching data
 
@@ -167,6 +191,12 @@ property is accessed, and it will "eventually" resolve to the returned `json` in
 There are a number of utilities in `ember-resources` for dealing with "Reactive async~ish" data a little nicer.
 See the [README](https://github.com/nullVoxPopuli/ember-resources) over there for more details.
 
+Benefits of using a Resource:
+ - lazy, only runs when accessed
+ - reactive, changes to tracked data will re-invoke the resource
+ - everything is encapsulated, no need to worry about template <-> javascript communication
+ - easily unit testable
+ - can be used in vanilla JavaScript classes
 
 ## Handling destruction
 
@@ -190,8 +220,9 @@ We should not add more DOM than we absolutely need, and behavior setup in JS sho
 ```js
 import { registerDestructor } from '@ember/destroyable';
 
-class MyClass {
-  constructor() {
+class MyComponent extends Component {
+  constructor(owner, args) {
+    super(owner, args);
 
     this.setupWindowListener();
     this.setupScrollListener();
@@ -221,6 +252,12 @@ you know exactly what conditions are needed to safely teardown. Keeping that gro
 easier if or when you need several teardown steps for various things (maybe you setup a few listeners, a Mutation
 Observer, other stuff).
 
+Benefits of `@ember/destroyable`
+ - co-locates setup+teardown
+ - can be used anywhere, not just in ember constructs
+ - eliminates the need for "willDestroy" hooks provided by a framework
+ - can easily share combined sets of setup+teardown functions
+
 Docs on [`@ember/destroyable`](https://api.emberjs.com/ember/release/modules/@ember%2Fdestroyable)
 
 Related, if you find the registerDestructor setup/teardown dance a bit tiring, there is a utility library,
@@ -240,7 +277,23 @@ class Hello {
 - [Introducing @use](https://www.pzuraq.com/introducing-use/) by [pzuraq](https://www.pzuraq.com/)
 - [ember-could-get-used-to-this](https://github.com/pzuraq/ember-could-get-used-to-this)
 - [ember-resources](https://github.com/NullVoxPopuli/ember-resources)
+  - note that ember-resources is inspired by pzuraq's work, and solves some of the common challenges
+    that the ember-could-get-used-to-this' implementation faces:
+    - Typescript support without wrapper no-op methods
+      - No need for decorator (typescript can't augment types with decorators)
+    - Custom Resources no longer need a magic 'value' property
+    - Built in support for (async) functions and concurrency tasks
+
+    Much thanks to pzuraq, because without ember-could-get-used-to-this, ember-resources would not have existed.
+
+- [RFC 567: `@use` and Resources](https://github.com/emberjs/rfcs/pull/567)
+  - Discussion that lead to a bunch of smaller RFCs and the implementation of ember-could-get-used-to-this
+
 
 ## Why even change how I write code at all?
 
+You don't have to, that's up to you. One of the primary reasons `@ember/render-modifiers` was made as an
+addon was so that it _didn't_ have to be part of the framework, and that individual projects and teams
+could decide if it was the right fit for them. It's a very small package, so if it's only used in a few places,
+bundle size isn't that much of a concern for the average app.
 

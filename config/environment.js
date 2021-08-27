@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'website',
     environment,
@@ -14,8 +14,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -32,16 +32,17 @@ module.exports = function(environment) {
       // `,
       // coverImage: '/images/blog-cover.jpg',
 
-      navigation: [{
-        label: 'Home',
-        route: 'index'
-      },
-      // {
-      //   label: 'Built by Chris Manson',
-      //   route: 'page',
-      //   id: 'chris-manson'
-      // }
-    ]
+      navigation: [
+        {
+          label: 'Home',
+          route: 'index',
+        },
+        // {
+        //   label: 'Built by Chris Manson',
+        //   route: 'page',
+        //   id: 'chris-manson'
+        // }
+      ],
     },
 
     'responsive-image': {
@@ -51,8 +52,8 @@ module.exports = function(environment) {
       supportedWidths: [2000, 1000, 600, 300],
       removeSourceDir: false,
       justCopy: false,
-      extensions: ['jpg', 'jpeg', 'png', 'gif']
-    }
+      extensions: ['jpg', 'jpeg', 'png', 'gif'],
+    },
   };
 
   if (environment === 'development') {

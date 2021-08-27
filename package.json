@@ -27,8 +27,8 @@
     "@ember/optional-features": "^2.0.0",
     "@ember/render-modifiers": "^1.0.2",
     "@ember/test-helpers": "^2.4.2",
-    "@glimmer/component": "^1.0.4",
-    "@glimmer/tracking": "^1.0.4",
+    "@glimmer/component": "1.0.4",
+    "@glimmer/tracking": "1.0.4",
     "babel-eslint": "10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.1.0",
@@ -83,7 +83,7 @@
     "yarn": "1.22.5"
   },
   "dependencies": {
-    "@glimmer/tracking": "^1.0.4",
+    "@glimmer/tracking": "1.0.4",
     "ember-prism": "^0.11.0",
     "prismjs-glimmer": "^1.1.1",
     "sharp": "^0.29.0"

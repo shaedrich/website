@@ -80,7 +80,7 @@
   },
   "volta": {
     "node": "14.17.5",
-    "yarn": "1.22.5"
+    "yarn": "1.22.11"
   },
   "dependencies": {
     "@glimmer/tracking": "1.0.4",

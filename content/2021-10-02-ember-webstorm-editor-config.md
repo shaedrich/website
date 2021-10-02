@@ -60,3 +60,12 @@ There are two plugins at the moment for working with Ember in IntelliJ editors:
 
 
   For all the other problems, I'll be periodically checking in with the folks who work on the Ember plugins for the IntelliJ family of editors, and see if it's feasible to get things moving sooner or later (scale of timeline unknown, obvs).
+
+
+_Note that at the time of writing, I only have these plugins installed_
+
+![Downloaded Plugins, listed below](/public/images/webstorm/downloaded-plugins.png)
+
+- [Ember.JS](https://plugins.jetbrains.com/plugin/8049-ember-js)
+- [One Dark theme](https://plugins.jetbrains.com/plugin/11938-one-dark-theme)
+- [Rider UI Theme Pack](https://plugins.jetbrains.com/plugin/13883-rider-ui-theme-pack)

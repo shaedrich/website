@@ -21,8 +21,8 @@ module.exports = function (defaults) {
           },
           removeSource: true,
           justCopy: false,
-        }
-      ]
+        },
+      ],
     },
     'ember-prism': {
       theme: 'tomorrow',

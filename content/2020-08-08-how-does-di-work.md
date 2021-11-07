@@ -397,20 +397,19 @@ let container = new Proxy(registry, {
 });
 
 function lookupService(serviceName) {
-  let serviceModule = Object.entries(knownServices).find((serviceInfo) => {
-    let [ servicePath, serviceModule ] = serviceInfo;
+  let serviceModule = knownServices.find((serviceInfo) => {
+    let [ servicePath, esModule ] = serviceInfo;
 
     let name = servicePath.replace('services/', '');
 
-    if (serviceName === name) {
-      return serviceModule;
-    }
+    return serviceName === name;
   });
 
   if (!serviceModule) {
     throw new Error(`The Service, ${serviceName}, was not found.`);
   }
 
+  // We establish a convention that the service is defined on the default export
   return serviceModule.default;
 }
 

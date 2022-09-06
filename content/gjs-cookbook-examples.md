@@ -1,5 +1,5 @@
 ---
-title: "Collection of strict mode / `<template>` demos of various concepts "
+title: "Collection of Ember.JS' strict mode / `<template>` demos of various concepts "
 image:
 imageMeta:
   attribution:

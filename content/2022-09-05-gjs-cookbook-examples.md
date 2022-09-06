@@ -15,7 +15,7 @@ tags:
 ---
 
 
-I've been writing a lot of demos lately in the REPL I've been working on, https://limber.glimdown.com
+I've been writing a lot of demos lately in the REPL I've been working on, [limber.glimdown.com](https://limber.glimdown.com)
 
 This post will be a collection of demos I've used in response to questions from various community members -- for the purpose of finding these again easily, and maybe other folks will f ind them useful as well.
 

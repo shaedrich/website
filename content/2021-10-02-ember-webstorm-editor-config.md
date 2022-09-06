@@ -4,7 +4,7 @@ image: /images/zsofia-szalay-QZW5syZqQSw-unsplash.jpg
 imageMeta:
   attribution: Zsofia Szalay
   attributionLink: https://unsplash.com/photos/QZW5syZqQSw
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Sat Oct 02 2021 12:09:38 GMT-0400 (Eastern Daylight Time)

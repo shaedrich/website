@@ -4,7 +4,7 @@ image: /images/timothy-meinberg-206976-unsplash.jpg
 imageMeta:
   attribution:
   attributionLink: https://unsplash.com/photos/xqV9QdGOSas
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Sat Jun 01 2019 17:10:54 GMT-0400 (Eastern Daylight Time)

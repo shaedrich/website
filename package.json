@@ -11,6 +11,7 @@
     "test": "tests"
   },
   "scripts": {
+    "prepare:safe": "cd node_modules/sharp && pnpm install && pnpm run install",
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
@@ -86,11 +87,15 @@
   },
   "pnpm": {
     "notes": {
-      "rollup": "See: https://github.com/empress/empress-blog-casper-template/issues/55"
+      "rollup": "See: https://github.com/empress/empress-blog-casper-template/issues/55",
+      "sharp": "Need to manually install stuff as it has post-install hooks"
     },
     "onlyBuiltDependencies": [
       "sharp"
     ],
+    "overrides": {
+      "sharp": "0.31.0"
+    },
     "peerDependencyRules": {
       "allowAny": [
         "rollup"

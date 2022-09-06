@@ -4,7 +4,7 @@ image: /images/mike-enerio-2IkxeDKaZdY-unsplash.jpg
 imageMeta:
   attribution:
   attributionLink: https://unsplash.com/photos/2IkxeDKaZdY
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Tue Aug 27 2019 21:17:22 GMT-0400 (Eastern Daylight Time)

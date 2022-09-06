@@ -9,6 +9,9 @@ authors:
   - nullvoxpopuli
 date: Mon Sep 05 2022 20:35:22 GMT-0400 (Eastern Daylight Time)
 tags:
+  - ember
+  - javascript
+  - frontend
 ---
 
 Gonna try to keep this list up to date best I can
@@ -46,3 +49,10 @@ Custom Blueprints
 
 Example Apps
  - [Octane: TodoMVC](https://github.com/NullVoxPopuli/ember-todomvc-tutorial) - deployed [here](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) - guide [on MDN](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+
+
+
+_Originally posted [here][original-post] on the [Ember Forums][discuss-forums] -- there is some additional discussion there as well._
+
+[original-post]: https://discuss.emberjs.com/t/my-cookbook-for-various-emberjs-things/19679
+[discuss-forums]: https://discuss.emberjs.com/

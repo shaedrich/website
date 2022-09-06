@@ -9,6 +9,9 @@ authors:
   - nullvoxpopuli
 date: Mon Sep 05 2022 20:30:07 GMT-0400 (Eastern Daylight Time)
 tags:
+  - ember
+  - javascript
+  - frontend
 ---
 
 
@@ -73,4 +76,7 @@ Note that effects _should_ be avoided (in any ecosystem, not just ember). They a
 
 
 
-_Originally posted_ [here](https://discuss.emberjs.com/t/collection-of-strict-mode-template-demos-of-various-concepts/19637) on the [Ember Forums](https://discuss.emberjs.com/) -- there is some additional discussion there as well.
+_Originally posted [here][original-post] on the [Ember Forums][discuss-forums] -- there is some additional discussion there as well._
+
+[original-post]: https://discuss.emberjs.com/t/collection-of-strict-mode-template-demos-of-various-concepts/19637
+[discuss-forums]: https://discuss.emberjs.com/

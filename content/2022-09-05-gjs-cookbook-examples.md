@@ -1,9 +1,9 @@
 ---
-title: "Collection of Ember.JS' strict mode / `<template>` demos of various concepts "
-image:
+title: "Collection of Ember.JS' strict mode / <template> demos of various concepts"
+image: /images/marek-piwnicki-3Exh4BdB2yA-unsplash.jpg
 imageMeta:
-  attribution:
-  attributionLink:
+  attribution: Marek Piwnicki
+  attributionLink: https://unsplash.com/photos/3Exh4BdB2yA
 featured: true
 authors:
   - nullvoxpopuli

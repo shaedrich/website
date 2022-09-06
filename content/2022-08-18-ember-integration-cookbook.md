@@ -1,10 +1,10 @@
 ---
 title: Ember Integration Cookbook
-image:
+image: /images/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg
 imageMeta:
-  attribution:
-  attributionLink:
-featured: true
+  attribution: Jan Kahánek
+  attributionLink: https://unsplash.com/photos/g3O5ZtRk2E4
+featured: false
 authors:
   - nullvoxpopuli
 date: Mon Sep 05 2022 20:35:22 GMT-0400 (Eastern Daylight Time)

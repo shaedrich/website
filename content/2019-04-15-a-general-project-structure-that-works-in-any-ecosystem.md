@@ -4,7 +4,7 @@ image: /images/robert-wagner-388370-unsplash.jpg
 imageMeta:
   attribution:
   attributionLink:
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Mon Apr 15 2019 06:44:47 GMT-0400 (Eastern Daylight Time)

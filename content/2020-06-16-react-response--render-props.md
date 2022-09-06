@@ -4,7 +4,7 @@ image: /images/ChangiAirport-Singapore.jpg
 imageMeta:
   attribution:
   attributionLink: https://unsplash.com/photos/6BVinN0Y7Xk
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Wed Jun 16 2020 21:42:58 GMT-0400 (Eastern Daylight Time)

@@ -4,7 +4,7 @@ image: /images/nathan-anderson-KvgB81s4dF0-unsplash.jpg
 imageMeta:
   attribution: "Nathan Anderson"
   attributionLink: https://unsplash.com/photos/KvgB81s4dF0
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Wed Jul 21 2021 15:45:43 GMT-0400 (Eastern Daylight Time)

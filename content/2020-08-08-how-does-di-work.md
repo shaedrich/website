@@ -4,7 +4,7 @@ image: /images/sweetgun-UrY8jgHHapw-unsplash.jpg
 imageMeta:
   attribution: "甜心之枪 Sweetgun"
   attributionLink: https://unsplash.com/photos/UrY8jgHHapw
-featured: true
+featured: false
 authors:
   - nullvoxpopuli
 date: Sat Aug 08 2020 13:04:01 GMT-0400 (Eastern Daylight Time)

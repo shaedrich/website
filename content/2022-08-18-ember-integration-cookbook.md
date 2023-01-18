@@ -40,7 +40,7 @@ Patterns / Concepts
 Starter Repos / Apps (needs READMEs / instructions for tooling setup)
  - [Polaris](https://github.com/NullVoxPopuli/polaris-starter)
  - [Polaris + Toucan](https://github.com/NullVoxPopuli/polaris-toucan-starter) (Polaris + tailwind, using the Toucan design system tailwind preset)
-
+ - [Vite](https://github.com/lifeart/demo-ember-vite) - lightning fast boot and rebuild times, at the cost of compatibility with existing projects
 
 Custom Blueprints
  - [vitest](https://github.com/NullVoxPopuli/vitest-blueprint) - since vitest only runs in node, this is only useful for testing non-browser things

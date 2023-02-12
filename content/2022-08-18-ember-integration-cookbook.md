@@ -35,6 +35,7 @@ Patterns / Concepts
  - ["Keep it Local"](https://www.youtube.com/watch?app=desktop&v=Mt7v-VbFjxk&feature=emb_title) by @chriskrycho / EmberConf 2021 (Video)
  - re-thinking lifecycles
    - [avoiding `@ember/render-modifiers`](https://nullvoxpopuli.com/avoiding-lifecycle)
+ - [Authenticated Routes](https://stackblitz.com/edit/github-qivg2a) 
 
 
 Starter Repos / Apps (needs READMEs / instructions for tooling setup)

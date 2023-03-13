@@ -15,7 +15,7 @@ tags:
 
 
 I've been using my desktop computer a lot more lately, and one thing I miss from my [frame.work](https://frame.work/) laptop is the passwordless authentication / passwordless sudo.
-On the framew.work, it uses a fingerprint reader, which makes `sudo` a breeze. Since I've been using my desktop with its big screen, big GPU (not that I do GPU work), and faster-than-Apple-M1-maybe-same-as-M2 processor (AMD Ryzen 9), I want the same passwordless experience!
+On the frame.work, it uses a fingerprint reader, which makes `sudo` a breeze. Since I've been using my desktop with its big screen, big GPU (not that I do GPU work), and faster-than-Apple-M1-maybe-same-as-M2 processor (AMD Ryzen 9), I want the same passwordless experience!
 
 Here is how to set up passwordless authentication with a [Yubikey](https://www.yubico.com/products/yubikey-5-overview/):
 
@@ -53,7 +53,7 @@ Release:	22.04
 ```
 
 
-**What happens if you don't have your Yubikey nearyby?**
+**What happens if you don't have your Yubikey nearby?**
 You'll be asked for your `sudo` password, as you would have been previously.
 
 

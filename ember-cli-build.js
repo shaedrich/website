@@ -32,6 +32,7 @@ module.exports = function (defaults) {
         'javascript',
         'typescript',
         'json',
+        'lua',
         'json5',
         'js-extras',
         'vim',

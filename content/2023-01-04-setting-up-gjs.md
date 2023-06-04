@@ -1,9 +1,9 @@
 ---
 title: "<template> quickstart"
-image:
+image: /images/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg
 imageMeta:
-  attribution:
-  attributionLink:
+  attribution: "Rene Böhmer"
+  attributionLink: https://unsplash.com/photos/YeUVDKZWSZ4
 featured: true
 authors:
   - nullvoxpopuli

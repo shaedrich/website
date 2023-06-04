@@ -17,30 +17,11 @@ env:
   TURBO_TEAM: myself
 
 jobs:
-  setup:
-    name: 'Setup'
-    runs-on: ubuntu-latest
-    outputs:
-      pending: ${{ steps.set-pending.outputs.pend }}
-    steps:
-      - uses: wyvox/action@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: pnpm build
-      # Determine which of the next jobs need to run
-      - id: set-pending
-        run: |
-          todos=$(pnpm -w exec ci-todo)
-          echo $todos | jq
-          echo "pend=$todos" >> $GITHUB_OUTPUT
-      - run:  echo ${{ github.event.number }} > ./pr-number.txt
-
   DeployProduction:
     name: "Deploy: Production"
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    needs: [setup]
     strategy:
       matrix:
         app:

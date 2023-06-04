@@ -75,9 +75,9 @@
     "edition": "octane"
   },
   "volta": {
-    "node": "14.17.5",
+    "node": "18.16.0",
     "yarn": "1.22.11",
-    "pnpm": "7.33.0"
+    "pnpm": "8.6.0"
   },
   "dependencies": {
     "@ember/render-modifiers": "^2.0.4",

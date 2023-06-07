@@ -58,6 +58,8 @@ The RFC that concluded the research in to this new file format is
       "glimmer-js",
       "glimmer-ts"
     ],
+    // ...
+    "prettier.documentSelectors": ["**/*.gjs", "**/*.gts"],
     ```
 
     For neovim,

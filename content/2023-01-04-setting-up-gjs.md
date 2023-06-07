@@ -118,8 +118,8 @@ Each of these projects is setup with linting, typechecking, etc
 
 Hopefully they can be a reference for when issues are encountered upon setup
 
-- https://github.com/NullVoxPopuli/limber
-- https://github.com/NullVoxPopuli/ember-resources/
-- https://github.com/universal-ember/ember-primitives/
-- https://github.com/CrowdStrike/ember-headless-form/
-- https://github.com/CrowdStrike/ember-headless-table/
+- [The Limber Project (REPL and Tutorial)](https://github.com/NullVoxPopuli/limber)
+- [ember-resources](https://github.com/NullVoxPopuli/ember-resources/)
+- [ember-primitives](https://github.com/universal-ember/ember-primitives/)
+- [ember-headless-form](https://github.com/CrowdStrike/ember-headless-form/)
+- [ember-headless-table](https://github.com/CrowdStrike/ember-headless-table/)

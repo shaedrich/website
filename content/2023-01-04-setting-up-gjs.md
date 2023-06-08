@@ -123,3 +123,7 @@ Hopefully they can be a reference for when issues are encountered upon setup
 - [ember-primitives](https://github.com/universal-ember/ember-primitives/)
 - [ember-headless-form](https://github.com/CrowdStrike/ember-headless-form/)
 - [ember-headless-table](https://github.com/CrowdStrike/ember-headless-table/)
+
+  ## See also
+  
+  - [Glint and &lt;template&gt;](https://mfeckie.dev/glint-and-ember-template-imports/)

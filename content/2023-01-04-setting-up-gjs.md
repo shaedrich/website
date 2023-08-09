@@ -48,7 +48,9 @@ The RFC that concluded the research in to this new file format is
     - Modifying you're existing lint command:<br>
       ```bash 
       eslint . --ext js,ts,gjs,gts
-    ```
+      ```
+      if you otherwise don't specify extensions, having a sufficiently  new enough [lint config from the app blueprint](https://github.com/ember-cli/ember-new-output/blob/v5.1.0/.eslintrc.js#L19) should "just work"
+    - make sure you have at least `eslint-plugin-ember@11.4.8`
 
     To get linting working in VSCode, you'll need to modify your settings (and be sure to include the defaults as well for both of these settings):
     ```json 

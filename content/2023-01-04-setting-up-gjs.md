@@ -91,7 +91,7 @@ The RFC that concluded the research in to this new file format is
       end,
     })
     ```
-    neovim has support for `typescript.glimmer` and `javascript.glimmer` built in. [`vim-polyglot`] breaks neovim's built-in syntax resolving, so uninstall that if you have it (neovim ships with treesitter which has very extensive language support).
+    neovim has support for `typescript.glimmer` and `javascript.glimmer` built in. [`vim-polyglot`](https://github.com/sheerun/vim-polyglot) breaks neovim's built-in syntax resolving, so uninstall that if you have it (neovim ships with treesitter which has very extensive language support).
 
 4. For prettier/formatting, you'll need [`prettier-plugin-ember-template-tag`](https://github.com/gitKrystan/prettier-plugin-ember-template-tag/)
   And for the best experience / workflow, run eslint and prettier separately (without the popular eslint-plugin-prettier)

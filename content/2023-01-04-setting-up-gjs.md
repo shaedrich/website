@@ -21,8 +21,8 @@ The RFC that concluded the research in to this new file format is
 1. For syntax highlighting:
     - in neovim and VSCode, see [here](https://github.com/ember-template-imports/ember-template-imports/#editor-integrations)
     - on the web,
-      - `highlight.js` via [highlightjs-glimmer](https://github.com/NullVoxPopuli/highlightjs-glimmer/)
-      - [`shiki` ](https://github.com/shikijs/shiki/tree/main) has gjs support built in
+        - `highlight.js` via [highlightjs-glimmer](https://github.com/NullVoxPopuli/highlightjs-glimmer/)
+        - [`shiki` ](https://github.com/shikijs/shiki/tree/main) has gjs support built in
 
 2. For type checking `gts`, you'll use [`glint`](https://github.com/typed-ember/glint) instead of `tsc`.
   Ember Glint documentation is here [on the Glint docs site](https://typed-ember.gitbook.io/glint/environments/ember).

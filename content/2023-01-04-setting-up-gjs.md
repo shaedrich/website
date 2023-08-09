@@ -20,7 +20,9 @@ The RFC that concluded the research in to this new file format is
 
 1. For syntax highlighting:
     - in neovim and VSCode, see [here](https://github.com/ember-template-imports/ember-template-imports/#editor-integrations)
-    - on the web, use `highlight.js` via [highlightjs-glimmer](https://github.com/NullVoxPopuli/highlightjs-glimmer/)
+    - on the web,
+      - `highlight.js` via [highlightjs-glimmer](https://github.com/NullVoxPopuli/highlightjs-glimmer/)
+      - [`shiki` ](https://github.com/shikijs/shiki/tree/main) has gjs support built in
 
 2. For type checking `gts`, you'll use [`glint`](https://github.com/typed-ember/glint) instead of `tsc`.
   Ember Glint documentation is here [on the Glint docs site](https://typed-ember.gitbook.io/glint/environments/ember).
@@ -38,6 +40,8 @@ The RFC that concluded the research in to this new file format is
       }
     }
     ```
+    <br>
+    Note that in Glint projects, you'll want to disable `tsserver`, so you don't have double-reported errors.
 3. For linting, there are two paths:
     - Quickest:<br>
       use `configs.ember()` from [`@nullvoxpopuli/eslint-configs`](https://github.com/NullVoxPopuli/eslint-configs) 
@@ -46,7 +50,7 @@ The RFC that concluded the research in to this new file format is
       eslint . --ext js,ts,gjs,gts
     ```
 
-    To get linting working in VSCode, you'll need to modify your settings:
+    To get linting working in VSCode, you'll need to modify your settings (and be sure to include the defaults as well for both of these settings):
     ```json 
     "eslint.probe": [
      // ...
@@ -85,6 +89,7 @@ The RFC that concluded the research in to this new file format is
       end,
     })
     ```
+    neovim has support for `typescript.glimmer` and `javascript.glimmer` built in. [`vim-polyglot`] breaks neovim's built-in syntax resolving, so uninstall that if you have it (neovim ships with treesitter which has very extensive language support).
 
 4. For prettier/formatting, you'll need [`prettier-plugin-ember-template-tag`](https://github.com/gitKrystan/prettier-plugin-ember-template-tag/)
   And for the best experience / workflow, run eslint and prettier separately (without the popular eslint-plugin-prettier)

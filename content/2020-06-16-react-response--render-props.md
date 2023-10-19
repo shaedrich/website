@@ -226,7 +226,9 @@ in Ember:
     <button>Call to Action</button>
   </:footer>
 
-  freely yielded content
+  <:default>
+    freely yielded content
+  </:default>
 </SomeComponent>
 ```
 

@@ -171,14 +171,14 @@ that data-fetching slows down your time-to-settled.
 
 ✔️  Good - Data is reactively and lazyily fetched as it is needed via a Resource.
 ```js
-import { useFunction } from 'ember-resources';
+import { trackedFunction } from 'ember-resources/util/function';
 export default class MyComponent extends Component {
-  data = useFunction(this, async (_, someArg) => {
-    let response = await fetch(`url/${someArg}`);
+  data = trackedFunction(this, async () => {
+    let response = await fetch(`url/${this.args.someArg}`);
     let json = await response.json();
 
     return json;
-  }, () => [this.args.someArg]);
+  });
 }
 ```
 ```hbs

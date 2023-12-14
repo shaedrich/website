@@ -1,6 +1,5 @@
 {
   "extends": [
-    "config:base"
-  ],
-  "schedule": ["after 11pm on sunday"]  
+    "github>NullVoxPopuli/renovate:js.json5"
+  ]
 }

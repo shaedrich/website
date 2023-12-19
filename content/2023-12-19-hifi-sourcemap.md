@@ -14,6 +14,36 @@ tags:
 
 If you're using [webpack](https://webpack.js.org/) with Ember, you may want to configure the [`devtool`](https://webpack.js.org/configuration/devtool/) option to have higher fidelity sourcemaps. Note though that on bigger projects (and I mean more than a few dozens of MB of JS), enabling the `source-map` option can increase build time by up to 40% (from at least what I've seen).
 
+
+If you're using:
+_ember-auto-import_:
+
+```js
+// ember-cli-build.js
+let app = new EmberApp(defaults, {
+  autoImport: {
+    webpack: {
+      devtool: 'source-map',
+    }
+  }
+  /* ... */
+});
+```
+
+_embroider_:
+```js
+// ember-cli-build.js
+return require('@embroider/compat').compatBuild(app, Webpack, {
+  /* ... */
+  packagerOptions: {
+    webpackConfig: {
+      devtool: 'source-map',
+      /* ... */
+    },
+  },
+});
+```
+
 ## A simple component
 
 ### with the defaults

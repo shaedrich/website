@@ -9,6 +9,7 @@ authors:
   - nullvoxpopuli
 date: Sun Jun 04 2023 08:39:26 GMT-0400 (Eastern Daylight Time)
 tags:
+  - ember
 ---
 
 This is a quick reference guide for getting started with gjs/gts aka `<template>`.

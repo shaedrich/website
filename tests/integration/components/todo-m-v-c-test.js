@@ -16,9 +16,9 @@ module('Integration | Component | todo-m-v-c', function (hooks) {
 
     // Template block usage:
     await render(hbs`
-      {{#todo-m-v-c}}
+      <TodoMVC>
         template block text
-      {{/todo-m-v-c}}
+      </TodoMVC>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

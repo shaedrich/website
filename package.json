@@ -87,7 +87,12 @@
     "prismjs-glimmer": "^1.1.1"
   },
   "pnpm": {
+    "overrides": {
+      "ember-prism": "^0.13.0",
+      "prismjs-glimmer": "^1.1.1"
+    },
     "notes": {
+      "overrides": "can't trust some of our deps to have their deps up to date",
       "rollup": "See: https://github.com/empress/empress-blog-casper-template/issues/55",
       "sharp": "Need to manually install stuff as it has post-install hooks"
     },

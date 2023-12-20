@@ -146,6 +146,8 @@ The tl;dr: is _yes_. But actual results will vary based on your actual app and u
 As always, please test in your own apps. 
 [Tracerbench](https://www.tracerbench.com/) is a statistically sound tool that uses [the built in performance.mark()](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) apis.
 
+This does **not** mean that this is always going to be the case. There has been increased activity in work happening in the VM to speed things up. For example, one such option that is being investigated is avoiding destruction callbacks on class components if the class didn't implement a destruction method (as well as removing the parent node before runnig destruction on child nodes (this would improve rendering brand new content or navigating to a new page)). 
+
 For the js-framework-benchmark, here are the actual results.
 
 ![Image of the results (table below)](/images/template-only-vs-class-js-framework-benchmark/results.png)

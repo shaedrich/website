@@ -187,7 +187,7 @@ And the table of the results here:
     text-transform: initial;
   }
 </style>
-<table class="results__table" >
+<table class="results__table" inert>
 	<thead>
 		<tr>
 			<td class="description">

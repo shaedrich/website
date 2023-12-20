@@ -366,3 +366,24 @@ And the table of the results here:
 		</tr>
 	</tbody>
 </table>
+
+
+My system at the time of running the benchmark(s):
+```bash
+❯ google-chrome --version
+Google Chrome 120.0.6099.109 
+
+❯ uname -srp
+Linux 6.2.0-39-generic x86_64
+
+
+❯ lsb_release -csd
+Ubuntu 23.04
+lunar
+```
+info from `screenfetch`:
+```
+CPU: AMD Ryzen 9 7900X 12-Core @ 24x 4.7GHz
+GPU: NVIDIA GeForce RTX 4080
+RAM: <in use> / 63438MiB
+```

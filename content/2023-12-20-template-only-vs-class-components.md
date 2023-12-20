@@ -1,9 +1,9 @@
 ---
 title: Template Only vs Class Components
-image:
+image: /images/daniels-joffe-PhQ4CpXLEX4-unsplash.jpg
 imageMeta:
-  attribution:
-  attributionLink:
+  attribution: Daniels Joffe 
+  attributionLink: https://unsplash.com/photos/man-in-white-thobe-holding-microphone-PhQ4CpXLEX4
 featured: true
 authors:
   - nullvoxpopuli

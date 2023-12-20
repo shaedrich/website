@@ -7,6 +7,10 @@ settings:
 onlyBuiltDependencies:
   - sharp
 
+overrides:
+  ember-prism: ^0.13.0
+  prismjs-glimmer: ^1.1.1
+
 dependencies:
   '@ember/render-modifiers':
     specifier: ^2.1.0

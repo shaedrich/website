@@ -59,7 +59,11 @@ Eventual home of the design system I'm making.
 
 ### [Kolay](https://github.com/universal-ember/kolay)
 
-Docs system that I use for highly dynamic and interactive docs.
+Docs system that I use for highly dynamic and interactive docs. Uses [typedoc](https://typedoc.org/) for api reference docs.
+
+### [ember-jsqr](https://nullvoxpopuli.github.io/ember-jsqr/)
+
+Component for scanning QR codes with lazy loading.
 
 ### [Glimmer + `<template>` for highlight.js](https://hljs-glimmer.nullvoxpopuli.com/?)
 

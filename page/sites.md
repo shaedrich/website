@@ -37,6 +37,10 @@ Hard-mode version of the game, Wordle.
 
 ## NPM Libraries
 
+This list is non-exhaustive, and only includes that which has separate sites deployed for docs.
+
+For an exhaustive list, see my [npm page](https://www.npmjs.com/~nullvoxpopuli).
+
 ### [ember-primitives](https://ember-primitives.pages.dev)
 
 headless / stylessless, a11y focused implementations of components and patterns to help make building apps faster.

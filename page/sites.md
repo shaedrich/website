@@ -45,7 +45,7 @@ For an exhaustive list, see my [npm page](https://www.npmjs.com/~nullvoxpopuli).
 
 headless / stylessless, a11y focused implementations of components and patterns to help make building apps faster.
 
-### [ember-resources](https://ember-resources.pages.dev/)
+### [ember-resources](https://ember-resources.nullvoxpopuli.com/)
 
 API Reference for [ember-resources](https://github.com/NullVoxPopuli/ember-resources/tree/main/docs)
 

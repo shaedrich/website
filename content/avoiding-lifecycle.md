@@ -198,6 +198,37 @@ Benefits of using a Resource:
  - easily unit testable
  - can be used in vanilla JavaScript classes
 
+
+✔️  Good - Data is lazily fetched after a user action 
+
+This is probably the best case scenario for data loading, even though it is _non-reactive_.
+
+```js
+export default class MyComponent extends Component {
+  @action
+  async loadData() {
+    let response = await fetch(`url/${this.args.someArg}`);
+    let json = await response.json();
+
+    return json;
+  }
+
+  @tracked data;
+
+  @action 
+  async handleClick() {
+    this.data = await loadData();
+    /* ... do something with data */
+  }
+}
+```
+```hbs
+{{!-- when ready for use --}}
+{{this.data}} will be the fetch's json
+```
+
+This is the most optimized that you can make a network request, and aligns with ember-data's new request manager usage recommendations.  Most notably, however, if `this.args.someArg` changes, the data will _not_ update, because data fetching was triggered by the user, not the autotracking system.
+
 ## Handling destruction
 
 For this example, assume we have a  class constructor that we've bound some events to the window.

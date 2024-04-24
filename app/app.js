@@ -1,9 +1,9 @@
 import Application from '@ember/application';
-import Resolver from 'ember-resolver';
-import loadInitializers from 'ember-load-initializers';
-import config from 'website/config/environment';
 
+import loadInitializers from 'ember-load-initializers';
 import { setup } from 'ember-prism';
+import Resolver from 'ember-resolver';
+import config from 'website/config/environment';
 
 setup();
 

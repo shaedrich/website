@@ -20,7 +20,6 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
-    "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
     "deploy": "ember build -e production && cp config/_redirects dist/"
   },

@@ -26,6 +26,7 @@ module.exports = function (environment) {
     blog: {
       title: 'NullVoxPopuli',
       description: 'a blog about technology',
+      twitter: 'nullvoxpopuli',
       // description: `
       //   null: a keyword indicating that something has no value.\n
       //   vox populi: the voice of the people

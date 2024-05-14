@@ -51,7 +51,27 @@ The RFC that concluded the research in to this new file format is
       eslint . --ext js,ts,gjs,gts
       ```
       if you otherwise don't specify extensions, having a sufficiently  new enough [lint config from the app blueprint](https://github.com/ember-cli/ember-new-output/blob/v5.1.0/.eslintrc.js#L19) should "just work"
-    - make sure you have at least `eslint-plugin-ember@11.4.8`
+    - make sure you have at least `eslint-plugin-ember@12.0.2`
+    - use the ember eslint parser in your eslint config, (mentioned in the [eslint-plugin-ember README](https://github.com/ember-cli/eslint-plugin-ember?tab=readme-ov-file#gtsgjs))
+
+       ```js
+       module.exports = {
+          // ...
+          overrides: [
+            // ...
+            {
+              files: ['**/*.gts'],
+              plugins: ['ember'],
+              parser: 'ember-eslint-parser',
+            },
+            {
+              files: ['**/*.gjs'],
+              plugins: ['ember'],
+              parser: 'ember-eslint-parser',
+            },
+          ],
+       };
+       ```
 
     To get linting working in VSCode, you'll need to modify your settings (and be sure to include the defaults as well for both of these settings):
     ```json 
@@ -100,17 +120,52 @@ The RFC that concluded the research in to this new file format is
 ## In an App
 
 1. Install [`ember-template-imports`](https://github.com/ember-template-imports/ember-template-imports/).
-  Ignore everything about `hbs`, and only use `<template>`
+2. If you use TypeScript,
+  1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
+  
+    ```js
+      "plugins": [
+        [
+          "@babel/plugin-transform-typescript",
+          { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
+        ],
+        // ...
+    ```
+
+  3. update your tsconfig.json to have (in `compilerOptions`)
+  
+    ```js
+    "verbatimModuleSyntax": true,
+    ```
+
 
 ## In a v1 Addon
 
 1. Install [`ember-template-imports`](https://github.com/ember-template-imports/ember-template-imports/).
-  Ignore everything about `hbs`, and only use `<template>`
+2. If you use TypeScript,
+  1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
+
+    ```js
+      "plugins": [
+        [
+          "@babel/plugin-transform-typescript",
+          { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
+        ],
+        // ...
+    ```
+
+  2. update your tsconfig.json to have (in `compilerOptions`)
+
+    ```js
+    "verbatimModuleSyntax": true,
+    "allowImportingTsExtensions": true,
+    ```
+
+
 
 ## In a v2 Addon
 
-1. Follow instructions on the README for this rollup plugin:
-[rollup-plugin-glimmer-template-tag](https://github.com/NullVoxPopuli/rollup-plugin-glimmer-template-tag)
+1. `@embroider/addon-dev` provides a `addon.gjs()` plugin.
 
 ## Usage and Patterns
 

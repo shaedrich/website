@@ -121,45 +121,45 @@ The RFC that concluded the research in to this new file format is
 
 1. Install [`ember-template-imports`](https://github.com/ember-template-imports/ember-template-imports/).
 2. If you use TypeScript,
-  1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
+    1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
+    
+      ```js
+        "plugins": [
+          [
+            "@babel/plugin-transform-typescript",
+            { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
+          ],
+          // ...
+      ```
   
-    ```js
-      "plugins": [
-        [
-          "@babel/plugin-transform-typescript",
-          { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
-        ],
-        // ...
-    ```
-
-  3. update your tsconfig.json to have (in `compilerOptions`)
-  
-    ```js
-    "verbatimModuleSyntax": true,
-    ```
+    3. update your tsconfig.json to have (in `compilerOptions`)
+    
+      ```js
+      "verbatimModuleSyntax": true,
+      ```
 
 
 ## In a v1 Addon
 
 1. Install [`ember-template-imports`](https://github.com/ember-template-imports/ember-template-imports/).
 2. If you use TypeScript,
-  1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
-
-    ```js
-      "plugins": [
-        [
-          "@babel/plugin-transform-typescript",
-          { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
-        ],
-        // ...
-    ```
-
-  2. update your tsconfig.json to have (in `compilerOptions`)
-
-    ```js
-    "verbatimModuleSyntax": true,
-    "allowImportingTsExtensions": true,
-    ```
+    1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
+  
+      ```js
+        "plugins": [
+          [
+            "@babel/plugin-transform-typescript",
+            { "allExtensions": true, "onlyRemoveTypeImports": true, "allowDeclareFields": true }
+          ],
+          // ...
+      ```
+  
+    2. update your tsconfig.json to have (in `compilerOptions`)
+  
+      ```js
+      "verbatimModuleSyntax": true,
+      "allowImportingTsExtensions": true,
+      ```
 
 
 

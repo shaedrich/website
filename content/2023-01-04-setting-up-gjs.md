@@ -142,7 +142,13 @@ The RFC that concluded the research in to this new file format is
 ## In a v1 Addon
 
 1. Install [`ember-template-imports`](https://github.com/ember-template-imports/ember-template-imports/).
-2. If you use TypeScript,
+
+    ```bash
+    npm add ember-template-imports
+    ```
+    it is important that this library be in `dependencies`, not `devDependencies`
+    
+3. If you use TypeScript,
     1. update your [babel config](https://github.com/emberjs/ember-cli-babel?tab=readme-ov-file#options) to have:
   
       ```js

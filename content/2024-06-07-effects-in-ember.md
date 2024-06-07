@@ -1,13 +1,13 @@
 ---
 title: Effects in Ember
-image: /images/daniels-joffe-PhQ4CpXLEX4-unsplash.jpg
+image: /images/photo-1531574595918-cb77c99fe5e2.avif
 imageMeta:
   attribution: Ethan Hoover 
   attributionLink: https://unsplash.com/photos/person-holding-fire-works-KkI9YpmO-mc 
 featured: true
 authors:
   - nullvoxpopuli
-date: Wed Dec 20 2023 14:00:38 GMT-0500 (Eastern Standard Time)
+date: Fri Jun 7 2024 00:00:00 GMT-0500 (Eastern Standard Time)
 tags:
   - ember
   - javascript

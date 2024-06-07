@@ -2,8 +2,8 @@
 title: Effects in Ember
 image: /images/daniels-joffe-PhQ4CpXLEX4-unsplash.jpg
 imageMeta:
-  attribution: Daniels Joffe 
-  attributionLink: https://unsplash.com/photos/man-in-white-thobe-holding-microphone-PhQ4CpXLEX4
+  attribution: Ethan Hoover 
+  attributionLink: https://unsplash.com/photos/person-holding-fire-works-KkI9YpmO-mc 
 featured: true
 authors:
   - nullvoxpopuli
@@ -22,14 +22,13 @@ Originally from [How to make an effect in Ember?](https://discuss.emberjs.com/t/
 > What’s the equivalent of Solid.js `createEffect()` (or React `useEffect()`, Meteor `Tracker.autorun()`, MobX `autorun()`, Vue `watchEffect()`, Svelte `$effect()`, Angular `effect()`) in Ember.js?
 
 
-This is certainly shocking to folks new to ember, but 
-we deliberately don't have an any effect by default.
+This is certainly shocking to folks new to ember, but ember deliberately doesn't have an any effect by default.
 
 Now, as a _framework_ author, the concept does  _sort of_ exist (at a high level) -- but I'll circle back around to this in a smidge.
 
 In your Solid demo, if you want to log function calls, you'd do:
 
-```gjs
+```js
 const a = () => 1;
 const b = () => 2;
 const c = () => 3;
@@ -47,7 +46,7 @@ We use templates as the sole entrypoint to reactivity, whereas solid's reactivit
 > "If the user can't see the data rendered, does the data need to exist?"
 
 Now, you're demo (with logging) is definitely effect-y. And if you _had no other way_ (like the situation was somehow impossible to model in a derived data way), you can do this:
-```gjs
+```js
 function myLog() {
   console.log(a(), b(), c());
 }
@@ -64,7 +63,7 @@ This is covered here
 
 
 There is a way around the above caveat, not being able to set during render, by making `myLog` invoke an async-IIFE, and waiting a tiny bit (i.e.: setting slightly after render):
-```gjs
+```js
 // now we're passing in the args directly so that they
 // are tracked (all args are auto-tracked in all
 // function / helper / component / modifier execution
@@ -100,9 +99,9 @@ Because of a couple current facts about our ecosystem:
 - we want derived data to be preferred, because it is the most efficient way to have your render state settle
 - calling a function from a template can only happen after the template is rendered, so doing so causes a _second render_ (I believe this is true in React as well) 
 - there _is_ a need to synchronize external state, and that has been part of the exploration of _Resources_, and `Sync`
-  - https://newdocs-rho.vercel.app/docs/universal/fundamentals/sync.html
-  - https://www.starbeamjs.com/guides/fundamentals/resources.html
-    - Current ember implementation does not have `sync` capabilities: https://github.com/NullVoxPopuli/ember-resources/tree/main/docs
+  - [Starbeam Docs on `Sync`](https://newdocs-rho.vercel.app/docs/universal/fundamentals/sync.html)
+  - [Starbeam Docs on `Resource`s](https://www.starbeamjs.com/guides/fundamentals/resources.html)
+    - Current ember implementation does not have `sync` capabilities: [ember-resources](https://github.com/NullVoxPopuli/ember-resources/tree/main/docs) (due to limitations of the private APIs implementing reactivity (ember-resources is public-API only))
     - [Tutorial Chapters on Resources](https://tutorial.glimdown.com/2-reactivity/5-resources) 
 - we think that effects are _overused_ and a huge footgun (for app devs), so by documenting a story more around synchronizing external state, we can continue to guide devs in to a pit of success.
 

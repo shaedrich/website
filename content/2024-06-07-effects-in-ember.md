@@ -99,8 +99,8 @@ Because of a couple current facts about our ecosystem:
 - we want derived data to be preferred, because it is the most efficient way to have your render state settle
 - calling a function from a template can only happen after the template is rendered, so doing so causes a _second render_ (I believe this is true in React as well) 
 - there _is_ a need to synchronize external state, and that has been part of the exploration of _Resources_, and `Sync`
-  - [Starbeam Docs on `Sync`](https://newdocs-rho.vercel.app/docs/universal/fundamentals/sync.html)
-  - [Starbeam Docs on `Resource`s](https://www.starbeamjs.com/guides/fundamentals/resources.html)
+    - [Starbeam Docs on `Sync`](https://newdocs-rho.vercel.app/docs/universal/fundamentals/sync.html)
+    - [Starbeam Docs on `Resource`s](https://www.starbeamjs.com/guides/fundamentals/resources.html)
     - Current ember implementation does not have `sync` capabilities: [ember-resources](https://github.com/NullVoxPopuli/ember-resources/tree/main/docs) (due to limitations of the private APIs implementing reactivity (ember-resources is public-API only))
     - [Tutorial Chapters on Resources](https://tutorial.glimdown.com/2-reactivity/5-resources) 
 - we think that effects are _overused_ and a huge footgun (for app devs), so by documenting a story more around synchronizing external state, we can continue to guide devs in to a pit of success.

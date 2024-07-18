@@ -78,3 +78,65 @@ Here is how you find them:
   3. If the package.json you're looking at does not have an `exports` config, _and_ the library is an ember-addon (has `ember-addon` listed in `keywords`), this likely the older "v1 addon" format, which was convention-based, and didn't follow broader standards (as they didn't exist yet). _By convention_, you'll need to check the `app` folder for your components/modifiers/helpers, and see what those files define or re-export. You can then import what those files use.
     For example, if you find `app/components/foo.js` contains `export { default } from 'libraryName/some-other-folder/foo`, you can import from that same location.
 
+
+This information is also available on the [ember-template-imports](https://github.com/ember-template-imports/ember-template-imports?tab=readme-ov-file#reference-import-external-helpers-modifiers-components) README.
+
+## Don't know which library to start with?
+
+you can find anything by searching in `node_modules`.
+
+I like using [the_silver_searcher](https://github.com/ggreer/the_silver_searcher), but any search tool will work.
+
+```bash 
+❯ ag --unrestricted "<ResponsiveImage" --file-search-regex '.js$'
+```
+
+I use `--unrestricted` to search ignored files (`node_modules`), and `--file-search-regex` with `.js$`, because I want to exclude source-map files, `.js.map$` (I haven't learned how to read those).
+
+So if I want to search for "ResponsiveImage" (a component that's used on this site), I don't get results in node_modules, but in my `dist` folder (my app's output) -- this means I need to try one of the other forms of which components can be referenced.
+
+These are the possibilities for the direct name reference:
+- `<PascalCase`, hoping that the component's JSDoc exists
+
+    ```bash 
+    ❯ ag --unrestricted "<ResponsiveImage" --file-search-regex '.js$'
+    ```
+- `class PascalCase` to find the file in JS 
+
+    ```bash 
+    ❯ ag --unrestricted "class ResponsiveImage" --file-search-regex '.js$'
+    ```
+
+But we can also search via file path:
+- `kebab-case`
+  
+    ```bash 
+    ❯ ag --unrestricted --filename-pattern 'responsive-image'
+    ```
+
+    using `--filename-pattern` allows us to search for file paths, and not the contents of the file. We might not know what is in a particular file.
+
+  - or, if too many results, you can search with the extensions:
+    - `kebab-case.js`
+    - `kebab-case.ts`
+    - `kebab-case.gjs`
+    - `kebab-case.gts`
+    - `kebab-case.hbs`
+    - `kebab-case/index.js`
+    - `kebab-case/index.ts`
+    - `kebab-case/index.gjs`
+    - `kebab-case/index.gts`
+    - `kebab-case/index.hbs`
+
+    All can be searched for all at once with this (which can still be far fewer results than with no extension):
+
+    ```bash 
+    ❯ ag --unrestricted --filename-pattern 'responsive-image(\/index)?\.(js|ts|hbs|gjs|gts)'
+    ```
+
+
+Feel like a lot of work to find which library something comes from? I think so, too.
+
+This is why gjs/gts/template-tag is so nice, because you _just know_ exactly where something is coming from.
+
+To try out gjs / `<template>` in your browser, check out this [interactive tutorial](https://tutorial.glimdown.com).
